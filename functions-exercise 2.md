@@ -13,6 +13,7 @@ function parseBetterJSAlternative(string $code): void
     $tokens = [];
     foreach ($regexes as $regex) {
         foreach ($statements as $statement) {
+            // Tokenize the statements
              $tokens[] = /* ... */;
         }
     }
