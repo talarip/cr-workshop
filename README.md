@@ -2,7 +2,7 @@
 
 ## Why?
 Aviod Technical debt. 
-Make sure of clean code and simple design.
+Make sure of clean code and simple design and security
 
 ## What to make sure in CR?
 All ACs are met
