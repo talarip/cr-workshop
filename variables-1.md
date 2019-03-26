@@ -1,11 +1,15 @@
 ## Use readable variable names
+```php
 $ymdstr = $moment->format('y-m-d');
+```
 
 ## Use the same vocabulary for the same type of variable
+```php
 getUserInfo();
 getUserData();
 getUserRecord();
 getUserProfile();
+```
 
 ## Use searchable names
 ```php
