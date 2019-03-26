@@ -1,26 +1,29 @@
-## Functions should do one thing
+## Object encapsulation
 
-function emailClients(array $clients)
+class BankAccount
 {
-    foreach ($clients as $client) {
-        $clientRecord = $db->find($client);
-        if ($clientRecord->isActive()) {
-            email($client);
-        }
-    }
+    public $balance = 1000;
 }
 
-## Function names should say what they do
+$bankAccount = new BankAccount();
 
-class Email
+// Buy shoes...
+$bankAccount->balance -= 100;
+
+## Make objects have private/protected members
+
+class Employee
 {
-    //...
+    public $name;
 
-    public function handle(): void
+    public function __construct(string $name)
     {
-        mail($this->to, $this->subject, $this->body);
+        $this->name = $name;
     }
 }
 
-$message = new Email(...);
-$message->handle();
+$employee = new Employee('John Doe');
+echo 'Employee name: '.$employee->name; // Employee name: John Doe
+
+## Jenga Effect https://www.urbandictionary.com/define.php?term=Jengaphobia&defid=2494196
+
