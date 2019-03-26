@@ -22,8 +22,6 @@ Easier to maintain.
 
 https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/
 
-https://github.com/jupeter/clean-code-php
-
 
 # CR Workshop: PART 2
 
