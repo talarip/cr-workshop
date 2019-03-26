@@ -13,7 +13,7 @@ Poor variable naming, bloated classes and methods, magic numbers -you name it- a
 No duplication.
 Each time you have to make a change in a duplicate code, you have to remember to make the same change to every instance. This increases the cognitive load and slows down the progress.
 
-Minimal number of classes and other moving parts.
+Minimal amount of code and other moving parts.
 Code is liability, keep it short and simple.
 
 Passes all tests.
