@@ -1,6 +1,7 @@
 
 ## Functions should only be one level of abstraction
 
+```php
 function parseBetterJSAlternative(string $code): void
 {
     $regexes = [

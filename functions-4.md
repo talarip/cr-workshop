@@ -1,5 +1,5 @@
 ## Avioable Patterns (Not exposing dependencies through the interfaces)
-
+```php
 class DBConnection
 {
     private static $instance;
@@ -22,3 +22,4 @@ class DBConnection
 }
 
 $singleton = DBConnection::getInstance();
+```

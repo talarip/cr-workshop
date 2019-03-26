@@ -1,5 +1,6 @@
 ## Functions should do one thing
 
+```php
 function emailClients(array $clients)
 {
     foreach ($clients as $client) {
@@ -9,9 +10,10 @@ function emailClients(array $clients)
         }
     }
 }
-
+```
 ## Function names should say what they do
 
+```php
 class Email
 {
     //...
@@ -24,3 +26,4 @@ class Email
 
 $message = new Email(...);
 $message->handle();
+```

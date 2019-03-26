@@ -1,5 +1,5 @@
 ## Object encapsulation
-
+```php
 class BankAccount
 {
     public $balance = 1000;
@@ -24,6 +24,6 @@ class Employee
 
 $employee = new Employee('John Doe');
 echo 'Employee name: '.$employee->name; // Employee name: John Doe
-
+```
 ## Jenga Effect https://www.urbandictionary.com/define.php?term=Jengaphobia&defid=2494196
 

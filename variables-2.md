@@ -1,4 +1,6 @@
 ## Avoid nesting too deeply and return early
+
+```php
 function isShopOpen($day): bool
 {
     if ($day) {
@@ -37,3 +39,4 @@ function fibonacci(int $n)
         return 'Not supported';
     }
 }
+```

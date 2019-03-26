@@ -1,5 +1,6 @@
 ## Don't use flags as function parameters
 
+```php
 function createFile(string $name, bool $temp = false): void
 {
     if ($temp) {
@@ -8,9 +9,11 @@ function createFile(string $name, bool $temp = false): void
         touch($name);
     }
 }
+```
 
 ## Avoid negative conditionals
 
+```php
 function isDOMNodeNotPresent(\DOMNode $node): bool
 {
     // ...
@@ -20,3 +23,4 @@ if (!isDOMNodeNotPresent($node))
 {
     // ...
 }
+```

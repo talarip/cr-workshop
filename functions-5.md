@@ -1,5 +1,5 @@
 ## Avoid conditionals (Remember to do one thing)
-
+```php
 class Airplane
 {
     // ...
@@ -16,9 +16,9 @@ class Airplane
         }
     }
 }
-
+```
 ## Type Checking
-
+```php
 function travelToTexas($vehicle): void
 {
     if ($vehicle instanceof Bicycle) {
@@ -36,9 +36,9 @@ function combine($val1, $val2): int
 
     return $val1 + $val2;
 }
-
+```
 ## Dead Code
-
+```php
 function oldRequestModule(string $url): void
 {
     // ...
@@ -51,3 +51,4 @@ function newRequestModule(string $url): void
 
 $request = newRequestModule($requestUrl);
 inventoryTracker('apples', $request, 'www.inventory-awesome.io');
+```
