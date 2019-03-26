@@ -5,7 +5,7 @@ Aviod Technical debt.
 Make sure of clean code and simple design and security
 
 ## What to make sure in CR?
-All ACs are met
+All ACs are met if possible. (with exceptions)
 
 Code is obvious for other programmers.
 Poor variable naming, bloated classes and methods, magic numbers -you name it- all of that makes code sloppy and difficult to grasp.
