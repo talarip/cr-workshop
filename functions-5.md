@@ -1,20 +1,19 @@
 ## Avoid conditionals (Remember to do one thing)
 ```php
-class Airplane
-{
-    // ...
-
-    public function getCruisingAltitude(): int
-    {
-        switch ($this->type) {
-            case '777':
-                return $this->getMaxAltitude() - $this->getPassengerCount();
-            case 'Air Force One':
-                return $this->getMaxAltitude();
-            case 'Cessna':
-                return $this->getMaxAltitude() - $this->getFuelExpenditure();
-        }
+class Bird {
+  // ...
+  public function getSpeed() {
+    switch ($this->type) {
+      case EUROPEAN:
+        return $this->getBaseSpeed();
+      case AFRICAN:
+        return $this->getBaseSpeed() - $this->getLoadFactor() * $this->numberOfCoconuts;
+      case NORWEGIAN_BLUE:
+        return ($this->isNailed) ? 0 : $this->getBaseSpeed($this->voltage);
     }
+    throw new Exception("Should be unreachable");
+  }
+  // ...
 }
 ```
 ## Type Checking
