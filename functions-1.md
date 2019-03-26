@@ -27,3 +27,24 @@ class Email
 $message = new Email(...);
 $message->handle();
 ```
+
+## Type Checking
+```php
+function travelToTexas($vehicle): void
+{
+    if ($vehicle instanceof Bicycle) {
+        $vehicle->pedalTo(new Location('texas'));
+    } elseif ($vehicle instanceof Car) {
+        $vehicle->driveTo(new Location('texas'));
+    }
+}
+
+function combine($val1, $val2): int
+{
+    if (!is_numeric($val1) || !is_numeric($val2)) {
+        throw new \Exception('Must be of type Number');
+    }
+
+    return $val1 + $val2;
+}
+```

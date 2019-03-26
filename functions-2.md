@@ -1,28 +1,26 @@
-
-## Functions should only be one level of abstraction
+## Don't use flags as function parameters
 
 ```php
-function parseBetterJSAlternative(string $code): void
+function createFile(string $name, bool $temp = false): void
 {
-    $regexes = [
-        // ...
-    ];
-
-    $statements = explode(' ', $code);
-    $tokens = [];
-    foreach ($regexes as $regex) {
-        foreach ($statements as $statement) {
-            // ...
-        }
+    if ($temp) {
+        touch('./temp/'.$name);
+    } else {
+        touch($name);
     }
+}
+```
 
-    $ast = [];
-    foreach ($tokens as $token) {
-        // lex...
-    }
+## Avoid negative conditionals
 
-    foreach ($ast as $node) {
-        // parse...
-    }
+```php
+function isSMSNotSelected(\Supporter $supporter): bool
+{
+    // ...
+}
+
+if (!isSMSNotSelected($supporter))
+{
+    // ...
 }
 ```

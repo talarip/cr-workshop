@@ -1,26 +1,26 @@
-## Don't use flags as function parameters
+## Avioable Patterns (Not exposing dependencies through the interfaces)
 
 ```php
-function createFile(string $name, bool $temp = false): void
+class DBConnection
 {
-    if ($temp) {
-        touch('./temp/'.$name);
-    } else {
-        touch($name);
+    private static $instance;
+
+    private function __construct(string $dsn)
+    {
+        // ...
     }
-}
-```
 
-## Avoid negative conditionals
+    public static function getInstance(): DBConnection
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
 
-```php
-function isDOMNodeNotPresent(\DOMNode $node): bool
-{
+        return self::$instance;
+    }
+
     // ...
 }
 
-if (!isDOMNodeNotPresent($node))
-{
-    // ...
-}
+$singleton = DBConnection::getInstance();
 ```
