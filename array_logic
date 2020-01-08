@@ -1,0 +1,32 @@
+Array Logic
+
+$photo_rejected_reasons = ["exposure", "racy", "mood"]
+
+$reject_messages = [
+  [
+    	"reason" => "racy",
+   	 "message" => "Reject racy",
+  ],
+  [
+    	"reason" => "resolution",
+   	 "message" => "Reject resolution",
+  ],
+  [
+    	"reason" => "kissing",
+    	"message" => "Reject kissing",
+  ],
+  [
+    	"reason" => "weapon",
+    	"message" => "Reject weapon",
+  ],
+  [
+   	 "reason" => "noface",
+    	"message" => "Reject noface",
+  ],
+  [
+   	 "reason" => "exposure",
+    	"message" => "Reject exposure",
+  ],
+]
+
+Write a function which takes reject_messages & photo_rejected_reasons and returns top reject_message?
